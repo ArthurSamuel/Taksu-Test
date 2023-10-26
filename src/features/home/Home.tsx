@@ -1,11 +1,7 @@
 import { useSelector } from "react-redux";
 import { AuthState } from "../../store/User/store";
 import { Container, Wrapper } from "./Home.styles";
-import {
-  LargeText,
-  MediumText,
-  SmallText,
-} from "../../components/typography/Typography";
+import { LargeText, SmallText } from "../../components/typography/Typography";
 import { Gutter } from "../../components/gutter/Gutter";
 import TodoCard from "./__components/todoCard/TodoCard";
 import ModalToDoCard from "./__components/modal/Modal";

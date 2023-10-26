@@ -23,7 +23,7 @@ export default function PrivateRoute({ children }: IPrivateRoute) {
         navigate("/login");
       }
     }
-  }, []);
+  }, [dispatch, navigate, user?.activeUser]);
 
   return <React.Fragment>{children}</React.Fragment>;
 }

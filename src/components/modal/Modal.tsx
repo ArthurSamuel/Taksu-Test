@@ -7,7 +7,7 @@ interface IModal {
 }
 
 export default function Modal({ children, onClick }: IModal) {
-  const [visible, setVisible] = useState(false);
+  const [visible] = useState(false);
 
   if (visible) return null;
 

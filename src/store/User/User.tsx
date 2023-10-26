@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { IAuthData, ITodoData } from "../../features/login/Login.type";
-import { isOverDue } from "../../utils/Date";
 
 export interface AuthState {
   user: IAuthData | undefined;
@@ -61,6 +60,7 @@ export const counterSlice = createSlice({
             if (item.id !== action.payload.id) {
               return item;
             }
+            return null;
           }
         );
         const key = process.env.REACT_APP_KEY;
