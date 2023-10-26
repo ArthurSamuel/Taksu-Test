@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface IContainer {
   color?: string;
-  bgColor?: string;
+  backgroundcolor?: string;
 }
 
 export const Container = styled.div<IContainer>`
@@ -10,7 +10,7 @@ export const Container = styled.div<IContainer>`
   height: 15px;
   padding: 5px;
   border-radius: 20px;
-  background-color: ${(props) => props.bgColor || "gray"};
+  background-color: ${(props) => props.backgroundcolor || "gray"};
   color: ${(props) => props.color || "white"};
   display: flex;
   justify-content: center;

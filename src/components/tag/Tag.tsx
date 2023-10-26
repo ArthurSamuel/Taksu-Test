@@ -1,14 +1,14 @@
 import { Container } from "./Tag.styles";
 
 interface ITag {
-  bgColor?: string;
+  backgroundcolor?: string;
   text: string;
   color?: string;
 }
 
-export default function Tag({ color, bgColor, text }: ITag) {
+export default function Tag({ color, backgroundcolor, text }: ITag) {
   return (
-    <Container bgColor={bgColor} color={color}>
+    <Container backgroundcolor={backgroundcolor} color={color}>
       {text}
     </Container>
   );

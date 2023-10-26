@@ -1,7 +1,7 @@
 import { Button } from "../../components/button/Button.styles";
 import { Gutter } from "../../components/gutter/Gutter";
 import { ErrorText, SmallText } from "../../components/typography/Typography";
-import { Container, Wrapper } from "./Login.styles";
+import { ButtonIcon, Container, Wrapper } from "./Login.styles";
 import { Formik } from "formik";
 import { InputFC } from "../../components/input/Input.styles";
 import useAuth from "./hook/useAuth";
@@ -33,11 +33,15 @@ export default function Login() {
                   name="user"
                   onChange={handleChange}
                   value={values.user}
+                  placeholder="John Doe"
                 />
                 <ErrorText> {touched.user && errors.user}</ErrorText>
                 <Gutter vertical={15}>
-                  <Button type="submit" width={50} color="green">
-                    Next
+                  <Button type="submit" width={65} color="green">
+                    <ButtonIcon>
+                      Next
+                      <i className="bi bi-arrow-right"></i>
+                    </ButtonIcon>
                   </Button>
                 </Gutter>
               </form>

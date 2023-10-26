@@ -55,7 +55,7 @@ export default function TodoCard({ date, title, type, id }: ITodoCard) {
         <TopContent>
           <Tag
             text={tagConfig.text}
-            bgColor={tagConfig.bgColor}
+            backgroundcolor={tagConfig.bgColor}
             color={tagConfig.color}
           />
           <DeleteIcon onClick={handleOnClickDelete}>

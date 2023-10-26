@@ -29,7 +29,8 @@ export const counterSlice = createSlice({
           date: action.payload.date,
           title: action.payload.title,
         });
-        localStorage.setItem("kunci", JSON.stringify(state.user));
+        const key = process.env.REACT_APP_KEY;
+        localStorage.setItem(key || "", JSON.stringify(state.user));
       }
     },
     updateTodoReducer: (
@@ -46,7 +47,8 @@ export const counterSlice = createSlice({
           }
           return item;
         });
-        localStorage.setItem("kunci", JSON.stringify(state.user));
+        const key = process.env.REACT_APP_KEY;
+        localStorage.setItem(key || "", JSON.stringify(state.user));
       }
     },
     deleteTodoReducer: (state, action: PayloadAction<{ id: any }>) => {
@@ -61,7 +63,8 @@ export const counterSlice = createSlice({
             }
           }
         );
-        localStorage.setItem("kunci", JSON.stringify(state.user));
+        const key = process.env.REACT_APP_KEY;
+        localStorage.setItem(key || "", JSON.stringify(state.user));
       }
     },
   },

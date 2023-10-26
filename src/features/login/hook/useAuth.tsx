@@ -8,8 +8,8 @@ const useAuth = () => {
   const dispatch = useDispatch();
 
   const login = ({ user }: { user: string }) => {
-    const key = "kunci";
-    const temp = localStorage.getItem(key);
+    const key = process.env.REACT_APP_KEY;
+    const temp = localStorage.getItem(key || "");
     let data = {} as IAuthData;
     data.activeUser = user;
     data.records = [];
@@ -27,7 +27,7 @@ const useAuth = () => {
         data: [],
       });
     }
-    localStorage.setItem(key, JSON.stringify(data));
+    localStorage.setItem(key || "", JSON.stringify(data));
     dispatch(setUser(data));
     navigate("/");
   };
